@@ -24,7 +24,7 @@ public class PageBase {
 
     public PageBase(WebDriver driver) {
         this.driver = driver;
-      //  PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver, this);
     }
 
     public void type(WebElement element, String text) {

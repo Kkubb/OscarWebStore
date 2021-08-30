@@ -10,14 +10,16 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
     WebDriver driver;
+
+
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://selenium1py.pytonanywhere.com");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
+
     @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
