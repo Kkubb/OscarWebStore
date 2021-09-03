@@ -5,7 +5,7 @@ import com.telran.oscar.pages.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+/*
 public class RegisterPageTests extends TestBase {
 
     @BeforeMethod
@@ -15,9 +15,9 @@ public class RegisterPageTests extends TestBase {
 
     @Test
     public void newUserRegistrationNegative() {
-        new RegisterPage(driver).fillRegisterForm().clickOnSubmit();
+        new RegisterPage(driver).fillRegisterForm(email, ).clickOnSubmit();
         Assert.assertTrue(new RegisterPage(driver).isErrorMessageDisplayed());
     }
 
 }
-
+*/

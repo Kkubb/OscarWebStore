@@ -16,7 +16,7 @@ public class TestBase {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://selenium1py.pytonanywhere.com");
+        driver.get("http://selenium1py.pytonanywhere.com/en-gb/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
