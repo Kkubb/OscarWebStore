@@ -20,9 +20,17 @@ public class HomePage extends PageBase {
     @FindBy(id = "login_link")
     WebElement loginLink;
 
-    public RegisterPage clickOnLoginOnRegisterButton() {
+    public RegisterPage clickOnLoginOrRegisterButton() {
         loginLink.click();
         return new RegisterPage(driver);
+    }
+
+    @FindBy(xpath = "//a[@href='/en-gb/catalogue/']")
+    WebElement allProductCatalogue;
+
+    public ProductPage openProductCatalogue() {
+        allProductCatalogue.click();
+        return new ProductPage(driver);
     }
 }
 

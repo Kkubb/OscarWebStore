@@ -27,4 +27,14 @@ public class RegisterPage extends PageBase{
         registerBtn.click();
         return this;
     }
+
+    @FindBy(id = "register_form")
+    WebElement registerForm;
+
+    public boolean isRegisterFormDisplayed() {
+        return registerForm.isDisplayed();
+    }
 }
+//Working login:
+//Login:	booklover1@gmail.com
+//Password: 	Book12345!
