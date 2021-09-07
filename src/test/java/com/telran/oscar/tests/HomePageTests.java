@@ -20,7 +20,7 @@ public class HomePageTests extends TestBase {
 
     @Test
     public void userCanSelectProductMenuTest() {
-        homePage.selectCatedory();
+        homePage.selectCategory();
         Assert.assertTrue(productPage.isItProductPage());
     }
 

@@ -12,7 +12,7 @@ public class HomePage extends PageBase {
     @FindBy(css = ".dropdown-submenu")
     WebElement submenuBook;
 
-    public ProductPage selectCatedory() {
+    public ProductPage selectCategory() {
         submenuBook.click();
         return new ProductPage(driver);
     }
@@ -24,6 +24,13 @@ public class HomePage extends PageBase {
         loginLink.click();
         return new RegisterPage(driver);
     }
+    @FindBy(xpath = "//i[@class='icon-user']")
+    WebElement accountBtn;
+
+    public ProfilePage clickOnAccount() {
+        accountBtn.click();
+        return new ProfilePage(driver);
+    }
 
     @FindBy(xpath = "//a[@href='/en-gb/catalogue/']")
     WebElement allProductCatalogue;
@@ -32,5 +39,6 @@ public class HomePage extends PageBase {
         allProductCatalogue.click();
         return new ProductPage(driver);
     }
+
 }
 

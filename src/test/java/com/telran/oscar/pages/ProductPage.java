@@ -1,4 +1,5 @@
 package com.telran.oscar.pages;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,7 @@ public class ProductPage extends PageBase {
         nonFictionCatalogue.click();
         return this;
     }
+
     @FindBy(xpath = "//div[@class='page-header action'][contains(.,'Fiction')]")
     WebElement fictionTitle;
 
@@ -43,4 +45,38 @@ public class ProductPage extends PageBase {
     public boolean isNonFictionCategoryDisplayed() {
         return nonFictionTitle.isDisplayed();
     }
+
+    public String getItemNameFromList(int number) {
+        return driver.findElement(By.cssSelector(".col-xs-6:nth-child(" + number + ") h3 > a"))
+                .getText();
+    }
+
+    public ProductPage clickOnItemName(int num) {
+        driver.findElement(By.cssSelector(".col-xs-6:nth-child(" + num + ") h3 > a")).click();
+        return this;
+    }
+
+    @FindBy(css = "h1")
+    WebElement productTitle;
+
+    public String getItemName() {
+        return productTitle.getText();
+    }
+
+    @FindBy(css = ".col-xs-6:nth-child(1) .btn")
+    WebElement addToBasketBtn;
+
+    public ProductPage addItemToBasket() {
+        addToBasketBtn.click();
+        return this;
+    }
+
+    @FindBy(xpath = "//a[.='View basket']")
+    WebElement viewBasketBtn;
+
+    public BasketPage clickOnViewBasketBtn() {
+        viewBasketBtn.click();
+        return new BasketPage(driver);
+    }
+
 }

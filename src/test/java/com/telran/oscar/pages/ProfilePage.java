@@ -25,7 +25,7 @@ public class ProfilePage extends PageBase {
     WebElement deleteBtn;
 
     public HomePage deleteAccount(String text) {
-        type(deletePwdField,text);
+        type(deletePwdField, text);
         deleteBtn.click();
         return new HomePage(driver);
     }
@@ -42,7 +42,7 @@ public class ProfilePage extends PageBase {
     WebElement firstNameField;
 
     public ProfilePage editFirstNameField(String fName) {
-        type(firstNameField,fName);
+        type(firstNameField, fName);
         return this;
     }
 
