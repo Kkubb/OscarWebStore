@@ -30,9 +30,9 @@ public class TestBase {
     }
 
     @BeforeMethod(alwaysRun = true)
-    @Parameters("browser")
-    public void setUp(String browser) {
-        ChromeOptions options = new ChromeOptions();
+ //   @Parameters("browser")
+    public void setUp() {
+ /*       ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("window-size=1200x800");
         driver = new ChromeDriver(options);
@@ -40,9 +40,9 @@ public class TestBase {
             driver = new ChromeDriver(options);
         } else if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver(options);
-        }
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
+        }*/
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
         //   driver.manage().window().setSize(new Dimension(1920,1000));
         driver.get("http://selenium1py.pythonanywhere.com");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

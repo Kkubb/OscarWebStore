@@ -17,15 +17,9 @@ dependencies {
 
     implementation 'ru.yandex.qatools.ashot:ashot:1.5.4'
     implementation 'com.jayway.restassured:rest-assured:2.9.0'
-
-
 }
 
-task testRegr(type: Test) {
-    useTestNG() {
-        suites 'src/test/resources/testng.xml'
-    }
-    if (project.hasProperty('browser')) {
-        systemProperty 'browser', "${browser}"
-    }
+test{
+    useTestNG()
 }
+

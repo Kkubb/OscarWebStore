@@ -1,0 +1,4 @@
+10:10:13.307 [main] INFO  com.telran.oscar.tests.TestBase - Start test loginNegativeTestWithoutData with data: []
+10:10:15.525 [main] INFO  com.telran.oscar.tests.TestBase - Test result: PASSED
+10:10:15.529 [main] INFO  com.telran.oscar.tests.TestBase - Stop test: null
+10:10:15.530 [main] INFO  com.telran.oscar.tests.TestBase - **********************************************
